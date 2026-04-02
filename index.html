@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>山东泰慧飞智能科技有限公司 - 低空经济领域领航者</title>
+    <meta name="description" content="山东泰慧飞智能科技，专注低空经济创新，核心业务涵盖无人机培训、编队表演、装调检修、场景应用，深耕政企校企合作，产学研融合发展。">
+    <!-- 引入Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 自定义Tailwind配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F3460', // 主色调-深海蓝（科技专业）
+                        secondary: '#1A6BB3', // 辅助色-晴空蓝
+                        accent: '#D4AF37', // 点缀色-泰山金（高端质感）
+                        dark: '#16213E', // 深色背景
+                        light: '#F8FAFC', // 浅色背景
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- 自定义样式 -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 15px 30px rgba(15, 52, 96, 0.15);
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-light text-gray-800 overflow-x-hidden">
+    <!-- 导航栏 -->
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2">
+                    <span class="text-primary text-2xl font-bold">
+                        <i class="fas fa-plane-up mr-2"></i>泰慧飞智能科技
+                    </span>
+                </a>
+
+                <!-- 桌面端导航 -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#home" class="font-medium hover:text-primary transition-colors">首页</a>
+                    <a href="#about" class="font-medium hover:text-primary transition-colors">关于我们</a>
+                    <a href="#business" class="font-medium hover:text-primary transition-colors">核心业务</a>
+                    <a href="#cooperation" class="font-medium hover:text-primary transition-colors">合作生态</a>
+                    <a href="#team" class="font-medium hover:text-primary transition-colors">团队文化</a>
+                    <a href="#contact" class="font-medium hover:text-primary transition-colors">联系我们</a>
+                    <a href="tel:400-000-0000" class="bg-primary text-white px-5 py-2 rounded-full hover:bg-primary/90 transition-colors">
+                        <i class="fas fa-phone mr-2"></i>咨询热线
+                    </a>
+                </nav>
+
+                <!-- 移动端汉堡菜单 -->
+                <button id="menuBtn" class="md:hidden text-2xl text-primary">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- 移动端导航菜单 -->
+        <div id="mobileMenu" class="md:hidden h-0 overflow-hidden transition-all duration-300 bg-white shadow-lg">
+            <div class="container mx-auto px-4 py-4 flex flex-col gap-4">
+                <a href="#home" class="py-2 font-medium hover:text-primary transition-colors">首页</a>
+                <a href="#about" class="py-2 font-medium hover:text-primary transition-colors">关于我们</a>
+                <a href="#business" class="py-2 font-medium hover:text-primary transition-colors">核心业务</a>
+                <a href="#cooperation" class="py-2 font-medium hover:text-primary transition-colors">合作生态</a>
+                <a href="#team" class="py-2 font-medium hover:text-primary transition-colors">团队文化</a>
+                <a href="#contact" class="py-2 font-medium hover:text-primary transition-colors">联系我们</a>
+                <a href="tel:400-000-0000" class="bg-primary text-white px-5 py-3 rounded-full text-center hover:bg-primary/90 transition-colors">
+                    <i class="fas fa-phone mr-2"></i>咨询热线
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 英雄区 -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center bg-gradient-to-r from-dark to-primary overflow-hidden">
+        <!-- 背景装饰 -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-10 left-10 w-40 h-40 rounded-full bg-accent blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-60 h-60 rounded-full bg-secondary blur-3xl"></div>
+        </div>
+        <!-- 背景图 -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://picsum.photos/id/307/1920/1080');"></div>
+        
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20">
+            <div class="max-w-4xl mx-auto text-center text-white">
+                <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-tight text-shadow mb-6">
+                    泰慧飞智能科技<br>开启低空智能新未来
+                </h1>
+                <p class="text-[clamp(1rem,2vw,1.25rem)] text-gray-100 mb-10 max-w-3xl mx-auto">
+                    专注低空经济领域的创新型科技企业 | 立足泰山 · 胸怀天下
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#business" class="bg-white text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl">
+                        查看核心业务
+                    </a>
+                    <a href="#contact" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all">
+                        联系我们
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 向下滚动箭头 -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white animate-bounce">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-primary mb-4">关于泰慧飞</h2>
+                <div class="w-20 h-1 bg-accent mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h3 class="text-2xl font-bold text-dark mb-4">专注低空经济 深耕智能创新</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        山东泰慧飞智能科技有限公司成立于2025年5月，是一家专注于低空经济领域的创新型科技企业。公司坐落于5A级景区泰山脚下，地理位置优越，环境优美，交通便捷，毗邻时尚露营基地，为企业发展提供了得天独厚的良好基础。
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        我们始终以技术创新为核心，以市场需求为导向，深耕低空经济全产业链布局，凭借专业的技术能力、完善的服务体系和充满活力的创新团队，为客户提供全流程、高品质的低空智能解决方案。
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xl">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">泰山脚下</h4>
+                                <p class="text-sm text-gray-500">区位优势显著</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xl">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">创新驱动</h4>
+                                <p class="text-sm text-gray-500">技术引领发展</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://picsum.photos/id/1018/800/600" alt="泰山脚下泰慧飞公司环境" class="w-full h-auto object-cover rounded-2xl">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/80 to-transparent p-6">
+                            <p class="text-white font-bold text-xl">立足泰山 · 胸怀天下</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心业务 -->
+    <section id="business" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-primary mb-4">核心业务</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">全产业链低空经济解决方案，覆盖培训、表演、运维、场景应用全维度</p>
+                <div class="w-20 h-1 bg-accent mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 业务1：无人机培训 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary text-2xl mb-6">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">专业无人机培训</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        提供全等级无人机驾驶员执照培训、行业应用专项培训，配备专业教练团队和标准化训练场地，理论+实操双轨教学，助力学员快速掌握专业飞行技能。
+                    </p>
+                </div>
+
+                <!-- 业务2：编队表演 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary text-2xl mb-6">
+                        <i class="fas fa-fireworks"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">无人机编队表演秀</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        定制化无人机编队灯光表演服务，覆盖文旅节庆、品牌活动、城市宣传等场景，千架级编队创意设计与执行能力，打造震撼的空中视觉盛宴。
+                    </p>
+                </div>
+
+                <!-- 业务3：装调检修 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary text-2xl mb-6">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">精密装调与检修维护</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        提供全品类无人机精密组装、调试、故障检修与日常维护服务，专业维修车间和原厂级技术支持，保障设备飞行安全，延长设备使用寿命。
+                    </p>
+                </div>
+
+                <!-- 业务4：场景应用 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary text-2xl mb-6">
+                        <i class="fas fa-drone"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">多元化场景应用服务</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        覆盖测绘航拍、农林植保、电力巡检、应急救援、安防巡逻等多行业应用，为政企客户提供定制化低空应用解决方案，释放低空经济产业价值。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合作生态 -->
+    <section id="cooperation" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-primary mb-4">合作共赢 · 共筑低空生态</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">深耕政企合作，引领校企合作模式，推动产学研深度融合发展</p>
+                <div class="w-20 h-1 bg-accent mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="rounded-xl overflow-hidden shadow-lg bg-gradient-to-b from-primary to-dark text-white p-8 card-hover">
+                    <div class="text-4xl mb-6 text-accent">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">政企合作</h3>
+                    <p class="leading-relaxed text-gray-100">
+                        积极对接政府低空经济发展规划，参与智慧城市、应急管理、文旅融合等项目建设，为政府部门提供专业的低空管理与应用解决方案，助力地方低空经济产业升级。
+                    </p>
+                </div>
+
+                <div class="rounded-xl overflow-hidden shadow-lg bg-gradient-to-b from-primary to-dark text-white p-8 card-hover">
+                    <div class="text-4xl mb-6 text-accent">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">校企合作</h3>
+                    <p class="leading-relaxed text-gray-100">
+                        与各大高校、职业院校深度合作，共建低空经济实训基地、无人机专业课程体系，推行"理论教学+实操实训+就业对接"的一体化培养模式，为行业输送高素质专业人才。
+                    </p>
+                </div>
+
+                <div class="rounded-xl overflow-hidden shadow-lg bg-gradient-to-b from-primary to-dark text-white p-8 card-hover">
+                    <div class="text-4xl mb-6 text-accent">
+                        <i class="fas fa-flask-vial"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">产学研融合</h3>
+                    <p class="leading-relaxed text-gray-100">
+                        联合科研院所、高校实验室开展低空技术研发、应用场景创新，推动科研成果落地转化，打通"技术研发-产品迭代-市场应用"的全链条，持续引领行业技术创新。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 团队文化 -->
+    <section id="team" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-primary mb-4">活力团队 · 创新文化</h2>
+                    <div class="w-20 h-1 bg-accent rounded-full mb-6"></div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        公司汇聚了一支思维敏捷、富有激情与创新精神的年轻化团队，核心成员均拥有低空经济、无人机行业多年从业经验，具备扎实的技术功底和丰富的项目执行能力。
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        我们崇尚开放、协作、自由探索的企业文化，营造不拘束、敢想敢为的工作氛围，鼓励每一位成员发挥创意与潜能，致力于将创新灵感转化为推动低空经济发展的实际力量。
+                    </p>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                        <div>
+                            <h4 class="text-3xl font-bold text-primary mb-2">开放</h4>
+                            <p class="text-sm text-gray-500">包容多元</p>
+                        </div>
+                        <div>
+                            <h4 class="text-3xl font-bold text-primary mb-2">协作</h4>
+                            <p class="text-sm text-gray-500">携手共进</p>
+                        </div>
+                        <div>
+                            <h4 class="text-3xl font-bold text-primary mb-2">创新</h4>
+                            <p class="text-sm text-gray-500">敢想敢为</p>
+                        </div>
+                        <div>
+                            <h4 class="text-3xl font-bold text-primary mb-2">专业</h4>
+                            <p class="text-sm text-gray-500">精益求精</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://picsum.photos/id/1049/400/300" alt="泰慧飞团队风采" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                        <img src="https://picsum.photos/id/177/400/600" alt="泰慧飞团队工作场景" class="rounded-lg shadow-lg w-full h-auto object-cover row-span-2">
+                        <img src="https://picsum.photos/id/1025/400/300" alt="泰慧飞团队团建活动" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 企业愿景 -->
+    <section class="py-24 bg-gradient-to-r from-dark to-primary text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-[clamp(2rem,5vw,3.5rem)] font-bold mb-8">立足泰山 · 胸怀天下</h2>
+            <p class="text-[clamp(1rem,2vw,1.25rem)] max-w-3xl mx-auto leading-relaxed text-gray-100 mb-10">
+                泰慧飞智能科技矢志成为低空经济领域的领航者与价值创造者，以专业技术、创新应用、可靠保障和活力团队，携手合作伙伴，共同开启低空智能应用新未来。
+            </p>
+            <a href="#contact" class="inline-block bg-white text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl">
+                携手合作 · 共创未来
+            </a>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-primary mb-4">联系我们</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">期待与您携手，共拓低空经济新蓝海</p>
+                <div class="w-20 h-1 bg-accent mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-dark mb-6">联系方式</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xl shrink-0">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">公司地址</h4>
+                                <p class="text-gray-600">山东省泰安市泰山脚下（毗邻时尚露营基地）</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xl shrink-0">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">联系电话</h4>
+                                <p class="text-gray-600">400-000-0000</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xl shrink-0">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">电子邮箱</h4>
+                                <p class="text-gray-600">info@taifeihuikj.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xl shrink-0">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">工作时间</h4>
+                                <p class="text-gray-600">周一至周日 9:00-18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <form class="bg-gray-50 rounded-xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold text-dark mb-6">在线咨询</h3>
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">姓名</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="请输入您的姓名">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">电话</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="请输入您的联系电话">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">邮箱</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="请输入您的电子邮箱">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">留言内容</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="请输入您的咨询内容"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary/90 transition-colors">
+                            提交咨询
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="#" class="text-2xl font-bold mb-4 inline-block">
+                        <i class="fas fa-plane-up mr-2"></i>泰慧飞智能科技
+                    </a>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        专注低空经济领域的创新型科技企业，矢志成为低空经济领域的领航者与价值创造者。
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-weixin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-weibo"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-douyin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">快速导航</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">首页</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">关于我们</a></li>
+                        <li><a href="#business" class="text-gray-400 hover:text-white transition-colors">核心业务</a></li>
+                        <li><a href="#cooperation" class="text-gray-400 hover:text-white transition-colors">合作生态</a></li>
+                        <li><a href="#team" class="text-gray-400 hover:text-white transition-colors">团队文化</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">联系我们</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">业务中心</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">无人机培训</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">编队表演</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">装调检修</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">场景应用</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">政企合作</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">校企合作</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">联系我们</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-accent"></i>
+                            <span class="text-gray-400">山东省泰安市泰山脚下</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-phone mt-1 text-accent"></i>
+                            <span class="text-gray-400">400-000-0000</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-envelope mt-1 text-accent"></i>
+                            <span class="text-gray-400">info@taifeihuikj.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-gray-400">
+                <p>© 2025-2026 山东泰慧飞智能科技有限公司 版权所有 | 鲁ICP备XXXXXXXX号</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // 导航栏滚动效果
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white', 'shadow-md');
+                navbar.classList.remove('bg-transparent');
+            } else {
+                navbar.classList.remove('bg-white', 'shadow-md');
+                navbar.classList.add('bg-transparent');
+            }
+        });
+
+        // 移动端菜单
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        let menuOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+            if (!menuOpen) {
+                mobileMenu.style.height = 'auto';
+                const height = mobileMenu.scrollHeight + 'px';
+                mobileMenu.style.height = '0px';
+                setTimeout(() => {
+                    mobileMenu.style.height = height;
+                }, 0);
+                menuBtn.innerHTML = '<i class="fas fa-times"></i>';
+                menuOpen = true;
+            } else {
+                mobileMenu.style.height = '0px';
+                menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                menuOpen = false;
+            }
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    // 关闭移动端菜单
+                    if (menuOpen) {
+                        mobileMenu.style.height = '0px';
+                        menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        menuOpen = false;
+                    }
+                }
+            });
+        });
+
+        // 初始化导航栏状态
+        window.dispatchEvent(new Event('scroll'));
+    </script>
+</body>
+</html>
